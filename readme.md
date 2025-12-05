@@ -75,10 +75,10 @@ A saída aparecerá no painel lateral ou inferior, dependendo da versão da IDE.
 
 ## Conteúdo deste repositório
 
-* Exercícios resolvidos em Portugol
-* Exemplos de lógica de programação
-* Estruturas condicionais e de repetição
-* Algoritmos com funções, vetores e matrizes
+* Tipos de dados em Portugol
+* Exemplos de lógica de programação em portugol
+* Estruturas condicionais e de repetição em portugol
+* Algoritmos com funções, vetores e matrizes em portugol
 
 ---
 ## Membros e suas funções
