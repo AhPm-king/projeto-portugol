@@ -92,7 +92,7 @@ programa {
     leia(sair)
     limpa()
   }
-  funcao listar(){
+  funcao listar(){//função de saida de dado, escreve a lista de alunos com um laço de repetição e escreva--------------------------------------
     escreva("::::::::::::::::::::::::::::::::::::\n")
     escreva("_/--_/--_/Lista do Almoço_/--_/--_/\n")
     escreva("::::::::::::::::::::::::::::::::::::\n\n")
