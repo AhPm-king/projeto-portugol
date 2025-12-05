@@ -1,5 +1,5 @@
 
-# Projeto em Portugol Web
+# Projeto Contraturno
 
 Este repositório contém algoritmos desenvolvidos utilizando o **Portugol Web**, uma plataforma online que permite escrever, executar e compartilhar códigos em Portugol diretamente pelo navegador — sem precisar instalar nenhum programa.
 
