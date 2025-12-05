@@ -1,5 +1,5 @@
 
-# 📘 Projeto em Portugol Web
+# Projeto em Portugol Web
 
 Este repositório contém algoritmos desenvolvidos utilizando o **Portugol Web**, uma plataforma online que permite escrever, executar e compartilhar códigos em Portugol diretamente pelo navegador — sem precisar instalar nenhum programa.
 
@@ -7,7 +7,7 @@ O Portugol Web é ideal para estudar lógica de programação, testar algoritmos
 
 ---
 
-## 🌐 O que é o Portugol Web?
+## O que é o Portugol Web?
 
 O **Portugol Web** é uma IDE online criada para interpretar algoritmos escritos em Portugol.
 Ele oferece:
@@ -20,16 +20,16 @@ Ele oferece:
 
 ---
 
-## 🛠️ Como usar o Portugol Web
+##  Como usar o Portugol Web
 
-### ✔️ 1. Abra o site do Portugol Web
+### 1. Abra o site do Portugol Web
 
 Acesse o ambiente online (basta procurar por **"Portugol Web IDE"** no Google).
 Não é necessário baixar nada.
 
 ---
 
-### ✔️ 2. Crie um novo algoritmo
+### 2. Crie um novo algoritmo
 
 Ao abrir a IDE, você verá um editor com a estrutura básica:
 
@@ -45,7 +45,7 @@ programa
 
 ---
 
-### ✔️ 3. Escreva seu código
+### 3. Escreva seu código
 
 Exemplo simples:
 
@@ -66,14 +66,14 @@ programa
 
 ---
 
-### ✔️ 4. Execute o algoritmo
+### 4. Execute o algoritmo
 
 Clique em **“Executar”** ou pressione **Ctrl + Enter**.
 A saída aparecerá no painel lateral ou inferior, dependendo da versão da IDE.
 
 ---
 
-## 📁 Conteúdo deste repositório
+## Conteúdo deste repositório
 
 * Exercícios resolvidos em Portugol
 * Exemplos de lógica de programação
