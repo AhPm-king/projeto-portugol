@@ -3,7 +3,7 @@ programa {
   logico vdd=falso,segue
   inteiro opcao,cont=0,cadastrar_Idade[60],cadastrar_Numero[60],dia_da_semana[5][60],dia_de_almoco[60]
   funcao inicio() {
-    faca{
+    faca{ //laço de repetição para repetir o menu---------------------------------------------------------------------
       escreva("::::::::::::::::::::::::::::::::::::::::::::::::\n")
       escreva("/--_/--_/--_/--_/--_/MENU/--_/--_/--_/--_/--_/\n")
       escreva("::::::::::::::::::::::::::::::::::::::::::::::::\n\n")
@@ -16,7 +16,7 @@ programa {
       escreva("::::::::::::::::::::::::::::::::::::::::::::::::\n")
       leia(opcao)
       limpa()
-      escolha(opcao){
+      escolha(opcao){//estrutura de controle usado para simplificar em opções, escolha-caso.---------------------------------------------------------------
         caso 1:
           cadastrar()
         pare
@@ -79,7 +79,6 @@ programa {
           escreva("1)Segunda  2)Terça  3)Quarta  4)Quinta  5)Sexta\n")
           leia(dia_da_semana[j][i])
           se(dia_da_semana[j][i]!=1 e dia_da_semana[j][i]!=2 e dia_da_semana[j][i]!=3 e dia_da_semana[j][i]!=4 e dia_da_semana[j][i]!=5){
-            //adicionar um verificador se o dia já foi digitado-------------------------------------------------------------------------------------------------
             j--
             escreva("Número digitado não corresponde a um dos dias da semana possíveis\n")
             escreva("\nAperte ENTER para Redigitar o dia: ")
@@ -197,7 +196,6 @@ programa {
         escreva("\n1)Segunda  2)Terça  3)Quarta  4)Quinta  5)Sexta\n")
         leia(dia_da_semana[i][cont])
         se(dia_da_semana[i][cont]!=1 e dia_da_semana[i][cont]!=2 e dia_da_semana[i][cont]!=3 e dia_da_semana[i][cont]!=4 e dia_da_semana[i][cont]!=5){
-          //adicionar um verificador se o dia já foi digitado-------------------------------------------------------------------------------------------------
           i--
           escreva("\nNúmero digitado não corresponde a um dos dias da semana possíveis\n")
           escreva("\nAperte ENTER para Redigitar o dia: ")
@@ -222,7 +220,7 @@ programa {
     }enquanto(segue)
     sair="M"
   }
-  funcao deletar(){
+  funcao deletar(){//funçao onde compacta a matriz e os vetores "deleta o que estava salvo"---------------------------------------------------------------------------
     escreva("Digite o nome do aluno que deseja deletar: ")
     leia(pesquisa)
     limpa()
