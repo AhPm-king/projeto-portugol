@@ -1,9 +1,15 @@
 programa {
+
+//Tipos de Dados salvos--------------------------------------------------------------------------------------
+
   cadeia cadastrar_Nomes[60],sair,confirmo,pesquisa,cadastrar_Responsavel[60],del
   logico vdd=falso,segue
   inteiro opcao,cont=0,cadastrar_Idade[60],cadastrar_Numero[60],dia_da_semana[5][60],dia_de_almoco[60]
+
   funcao inicio() {
+
       //laço de repetição para repetir o menu---------------------------------------------------------------------
+
     faca{ 
       escreva("::::::::::::::::::::::::::::::::::::::::::::::::\n")
       escreva("/--_/--_/--_/--_/--_/MENU/--_/--_/--_/--_/--_/\n")
@@ -16,11 +22,13 @@ programa {
       escreva("0) sair do programa\n\n")
       escreva("::::::::::::::::::::::::::::::::::::::::::::::::\n")
       leia(opcao)
+
       limpa()
 
      //estrutura de controle usado para simplificar em opções, escolha-caso---------------------------------------------------------------
 
       escolha(opcao){
+
         caso 1:
           cadastrar()
         pare
@@ -49,11 +57,15 @@ programa {
           escreva("Opção digitada não existe!\n")
           escreva("Digite ENTER para voltar ao menu ou 0 para sair:")
           leia(sair)
+
           limpa()
+
         pare
       }
     }enquanto(sair!="0")
   }
+
+//Função par mudar os dados de um aluno---------------------------------------------------------------
 
   funcao change(){
     escreva("::::::::::::::::::::::::::::::::::::::::::::::::::\n")
@@ -61,73 +73,106 @@ programa {
     escreva("::::::::::::::::::::::::::::::::::::::::::::::::::\n\n")
     escreva("Digite o aluno que deseja mudar as informações: ")
     leia(pesquisa)
+
     limpa()
+
     para(inteiro i=0;i<cont;i++){
       se(pesquisa==cadastrar_Nomes[i]){
+
         escreva("Escreva o nome do aluno que irá almoçar: ")
         leia(cadastrar_Nomes[i])
+
         escreva("Escreva a idade do aluno: ")
         leia(cadastrar_Idade[i])
+
         escreva("Digite o nome do responsavel pelo aluno: ")
         leia(cadastrar_Responsavel[i])
+
         escreva("Digite o número de contato do responsavel: ")
         leia(cadastrar_Numero[i])
+
         limpa()
+
         enquanto(vdd==falso){
+
           escreva("Digite quantos dias na semana o aluno irá almoçar: ")
           leia(dia_de_almoco[cont])
+
           se(dia_de_almoco[cont]>5 ou dia_de_almoco[cont]<1){
+
             escreva("Você digitou um número de dias da semana que não é possivel (A SEMANA TEM 5 DIAS)\n")
             escreva("\nAperte ENTER para Redigitar o dia: ")
             leia("")
+
             limpa()
+
           }senao{
             vdd=verdadeiro  
           }
         }
+
         escreva("Digite quais dias da semana o aluno irá almoçar:\n")
+
         para(inteiro j=0;j<dia_de_almoco[i];j++){ 
+
           escreva("1)Segunda  2)Terça  3)Quarta  4)Quinta  5)Sexta\n")
           leia(dia_da_semana[j][i])
+
           se(dia_da_semana[j][i]!=1 e dia_da_semana[j][i]!=2 e dia_da_semana[j][i]!=3 e dia_da_semana[j][i]!=4 e dia_da_semana[j][i]!=5){
+
             j--
             escreva("Número digitado não corresponde a um dos dias da semana possíveis\n")
             escreva("\nAperte ENTER para Redigitar o dia: ")
             leia("")
+
             limpa()
+
           }
         }
       }
     }
+
     escreva("Digite ENTER para voltar ao MENU ou 0 para SAIR:")
     leia(sair)
+
     limpa()
+
   }
 
 //função de saida de dado, escreve a lista de alunos com um laço de repetição e escreva--------------------------------------
 
   funcao listar(){
+
     escreva("::::::::::::::::::::::::::::::::::::\n")
     escreva("_/--_/--_/Lista do Almoço_/--_/--_/\n")
     escreva("::::::::::::::::::::::::::::::::::::\n\n")
+
     para(inteiro i=0;i<cont;i++){
+
       escreva("::::::::::::::::::::::::::::::::::\n\n")
       escreva("Nome do aluno: ",cadastrar_Nomes[i],"\n")
       escreva("Dias que irá almoçar: ")
+
       para(inteiro j=0;j<dia_de_almoco[i];j++){
+
         escolha(dia_da_semana[j][i]){
+
           caso 1:
           escreva("Segunda ")
           pare
+
           caso 2:
           escreva("Terça ")
           pare
+
           caso 3:
           escreva("Quarta ")
           pare
+
           caso 4:
           escreva("Quinta ")
           pare
+
           caso 5:
           escreva("Sexta")
           pare
@@ -135,11 +180,16 @@ programa {
       }
       escreva("\n\n:::::::::::::::::::::::::::::::::::\n\n")
     }
+
     escreva("Digite ENTER para voltar ao menu ou 0 para sair:")
     leia(sair)
+
     limpa()
+
   }
-  
+
+//Função para pesquisar informações totais do aluno---------------------------------------------------------------------
+
 funcao pesquisar(){
 
     escreva("Digite o nome do aluno que quer encontar: ")
@@ -156,7 +206,9 @@ funcao pesquisar(){
         escreva("Dias que irá almoçar: ")
 
         para(inteiro j=0;j<dia_de_almoco[i];j++){
+
           escolha(dia_da_semana[j][i]){
+
             caso 1:
             escreva("Segunda ")
             pare
@@ -186,50 +238,71 @@ funcao pesquisar(){
         escreva("\n\n:::::::::::::::::::::::::::::::::::\n\n")
 
       }senao se(pesquisa != cadastrar_Nomes[i] e i == cont){
+
         escreva("Aluno digitado não encontrado ou o nome digitado está incorreto\n")
+
       }
     }
 
     escreva("Digite ENTER para voltar ao MENU ou 0 para SAIR:")
     leia(sair)
+
     limpa()
+
   }
 
+//Função para salvar os dados dos alunos---------------------------------------------------------------
+
   funcao cadastrar(){
+
     faca{
+
       escreva("Escreva o nome do aluno que irá almoçar: ")
       leia(cadastrar_Nomes[cont])
+
       escreva("Escreva a idade do aluno: ")
       leia(cadastrar_Idade[cont])
+
       escreva("Digite o nome do responsavel pelo aluno: ")
       leia(cadastrar_Responsavel[cont])
+
       escreva("Digite o número de contato do responsavel: ")
       leia(cadastrar_Numero[cont])
+
       limpa()
 
       enquanto(vdd==falso){
+
         escreva("Digite quantos dias na semana o aluno irá almoçar: ")
         leia(dia_de_almoco[cont])
+
         se(dia_de_almoco[cont]>5 ou dia_de_almoco[cont]<1){
           escreva("Você digitou um número de dias da semana que não é possivel (A SEMANA TEM 5 DIAS)\n")
           escreva("\nAperte ENTER para Redigitar o dia: ")
           leia("")
+
           limpa()
+
         }senao{
           vdd=verdadeiro  
         }
       }
 
       escreva("Digite quais dias da semana o aluno irá almoçar: \n")
+
       para(inteiro i=0;i<dia_de_almoco[cont];i++){ 
+
         escreva("\n1)Segunda  2)Terça  3)Quarta  4)Quinta  5)Sexta\n")
         leia(dia_da_semana[i][cont])
+
         se(dia_da_semana[i][cont]!=1 e dia_da_semana[i][cont]!=2 e dia_da_semana[i][cont]!=3 e dia_da_semana[i][cont]!=4 e dia_da_semana[i][cont]!=5){
           i--
           escreva("\nNúmero digitado não corresponde a um dos dias da semana possíveis\n")
           escreva("\nAperte ENTER para Redigitar o dia: ")
           leia("")
+
           limpa()
+
         }
       }
 
@@ -240,7 +313,9 @@ funcao pesquisar(){
       escreva("::ENTER para continuar cadastrando\n")
       escreva("::M para voltar ao Menu\n")
       leia(confirmo)
+
       limpa()
+
       cont++
       vdd=falso
 
@@ -256,9 +331,12 @@ funcao pesquisar(){
 //funçao onde compacta a matriz e os vetores "deleta o que estava salvo"---------------------------------------------------------------------------
 
   funcao deletar(){
+
     escreva("Digite o nome do aluno que deseja deletar: ")
     leia(pesquisa)
+
     limpa()
+
     para(inteiro i=0;i<cont;i++){
         se(pesquisa==cadastrar_Nomes[i]){
 
@@ -269,7 +347,9 @@ funcao pesquisar(){
           escreva("Dias que irá almoçar: ")
 
           para(inteiro j=0;j<dia_de_almoco[i];j++){
+
             escolha(dia_da_semana[j][i]){
+
               caso 1:
               escreva("Segunda ")
               pare
@@ -302,6 +382,8 @@ funcao pesquisar(){
 
           limpa()
 
+//compactação dos vetores----------------------------------------------------------
+
           se(del=="s" ou del=="S"){
             para(inteiro i=0;i<cont;i++){
               se(pesquisa==cadastrar_Nomes[i]){
@@ -320,6 +402,8 @@ funcao pesquisar(){
 
     escreva("Digite ENTER para voltar ao MENU ou 0 para SAIR:")
     leia(sair)
+
     limpa() 
+
   }
 }
