@@ -81,7 +81,15 @@ A saída aparecerá no painel lateral ou inferior, dependendo da versão da IDE.
 * Algoritmos com funções, vetores e matrizes
 
 ---
+## Membros e suas funções
+Brayan Ferrari - Lider de Projeto
+Arthur Horácio - Programador
+Kainat Fleck - Analista de Requisitos
+Maria Eduarda Marka - Comunicadora
+Yasmin Takeda - Designer
 
+---
 ## Orientador
 Andrei Doberstein
+Valentinar Aguiar Cardozo
 
